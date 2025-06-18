@@ -1,10 +1,6 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-package com.mycompany.sistemaacademico.Estudiante;
+package com.mycompany.sistema.academico.Estudiante;
 
-import com.mycompany.sistemaacademico.PersonaInstitucional.PersonaInstitucional;
+import com.mycompany.sistema.academico.PersonaInstitucional.PersonaInstitucional;
 public class Estudiante extends PersonaInstitucional{
     
     //Atributo

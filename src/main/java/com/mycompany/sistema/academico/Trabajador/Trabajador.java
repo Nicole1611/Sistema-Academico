@@ -1,10 +1,7 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-package com.mycompany.sistemaacademico.Trabajador;
 
-import com.mycompany.sistemaacademico.Empleado.Empleado;
+package com.mycompany.sistema.academico.Trabajador;
+
+import com.mycompany.sistema.academico.Empleado.Empleado;
 public class Trabajador extends Empleado{
     
     //Atributo
@@ -24,8 +21,6 @@ public class Trabajador extends Empleado{
         this.gremio = gremio;
     }
     //Metodos
-    
-
     @Override
     public String toString() {
         return "PersonalServicios{"+super.toString() + "gremio=" + gremio + '}';

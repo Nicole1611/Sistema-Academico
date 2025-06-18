@@ -2,9 +2,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package com.mycompany.sistemaacademico.Empleado;
+package com.mycompany.sistema.academico.Empleado;
 
-import com.mycompany.sistemaacademico.PersonaInstitucional.PersonaInstitucional;
+import com.mycompany.sistema.academico.PersonaInstitucional.PersonaInstitucional;
 public class Empleado extends PersonaInstitucional{
     
     //Atributos
@@ -16,6 +16,14 @@ public class Empleado extends PersonaInstitucional{
         this.sueldo = sueldo;
     }
 
+    public double getSueldo() {
+        return sueldo;
+    }
+
+    public void setSueldo(double sueldo) {
+        this.sueldo = sueldo;
+    }
+    
     //Metodos
     @Override
     public String toString() {
