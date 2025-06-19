@@ -13,6 +13,8 @@ public interface IDecanos {
 public boolean agregarDecano (Decano decano);
 public void imprimirDecanos();
 public boolean actualizarDecano(int i,Decano decano);
-    
+public boolean eliminarDecano(int i, Decano decano);
+public boolean buscarDecano(int id);
+
     
 }

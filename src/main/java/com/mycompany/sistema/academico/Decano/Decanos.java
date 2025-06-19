@@ -40,4 +40,21 @@ public void imprimirDecanos(){
         return false;
         
     }
-}
+    public boolean eliminarDecano(int i,Decano decano){
+        decanos[i]=decano;
+        return false;
+    
+    }
+    public boolean buscarDecano(int id) {
+    for (int i = 0; i < totalDecanos; i++) {
+        if (decanos[i].getId() == id) {
+            System.out.println("Decano encontrado:");
+            System.out.println(decanos[i]); // usa toString()
+            return true;
+        }
+    }
+    System.out.println("No se encontró un decano con ID " + id);
+    return false;
+} 
+    }
+
