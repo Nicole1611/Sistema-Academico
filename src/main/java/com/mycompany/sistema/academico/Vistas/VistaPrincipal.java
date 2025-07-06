@@ -5,13 +5,17 @@
 package com.mycompany.sistema.academico.Vistas;
 import javax.swing.*;
 import java.awt.event.*;
-//import com.mycompany.sistema.academico.Vista.VEstudiantes;
+import com.mycompany.sistema.academico.Vistas.VEstudiantes;
+import com.mycompany.sistema.academico.Vistas.VTrabajadores;
+
 /**
  *
  * @author HP
  */
 public class VistaPrincipal extends javax.swing.JFrame {
-//private VEstudiantes ventanaEstudiantes;
+private VEstudiantes ventanaEstudiantes;
+private VTrabajadores ventanaTrabajadores;
+
     /**
      * Creates new form VistaPrincipal
      */
@@ -30,6 +34,7 @@ public class VistaPrincipal extends javax.swing.JFrame {
 
         lbDatos = new javax.swing.JLabel();
         btnDatosEstudiantes = new javax.swing.JButton();
+        btnTrabajador = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -42,19 +47,27 @@ public class VistaPrincipal extends javax.swing.JFrame {
             }
         });
 
+        btnTrabajador.setText("TRABAJADOR");
+        btnTrabajador.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnTrabajadorActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(140, 140, 140)
-                        .addComponent(lbDatos))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(51, 51, 51)
-                        .addComponent(btnDatosEstudiantes)))
+                .addGap(140, 140, 140)
+                .addComponent(lbDatos)
                 .addContainerGap(154, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(51, 51, 51)
+                .addComponent(btnDatosEstudiantes)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnTrabajador)
+                .addGap(83, 83, 83))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -62,7 +75,9 @@ public class VistaPrincipal extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(lbDatos)
                 .addGap(51, 51, 51)
-                .addComponent(btnDatosEstudiantes)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnDatosEstudiantes)
+                    .addComponent(btnTrabajador))
                 .addContainerGap(204, Short.MAX_VALUE))
         );
 
@@ -70,11 +85,18 @@ public class VistaPrincipal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnDatosEstudiantesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDatosEstudiantesActionPerformed
-    /*if (ventanaEstudiantes == null) {
+    if (ventanaEstudiantes == null) {
         ventanaEstudiantes = new VEstudiantes();
     }
-    ventanaEstudiantes.setVisible(true);*/
+    ventanaEstudiantes.setVisible(true);
     }//GEN-LAST:event_btnDatosEstudiantesActionPerformed
+
+    private void btnTrabajadorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTrabajadorActionPerformed
+    if (ventanaTrabajadores == null) {
+        ventanaTrabajadores = new VTrabajadores();
+    }
+    ventanaTrabajadores.setVisible(true);     // TODO add your handling code here:
+    }//GEN-LAST:event_btnTrabajadorActionPerformed
 
     /**
      * @param args the command line arguments
@@ -83,6 +105,7 @@ public class VistaPrincipal extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnDatosEstudiantes;
+    private javax.swing.JButton btnTrabajador;
     private javax.swing.JLabel lbDatos;
     // End of variables declaration//GEN-END:variables
 }

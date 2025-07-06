@@ -1,12 +1,10 @@
 
 package com.mycompany.sistema.academico.Trabajador;
 
-import com.mycompany.sistema.academico.Trabajador.Trabajador;
 
 public interface ITrabajadores {  
-    public boolean agregaTrabajador(Trabajador trabajador);
- public void imprimirTrabajador();
- public boolean actualizarTrabajador(int i, Trabajador trabajador);
- public boolean datoanuladoTrabajador(int i, Trabajador trabajador);
- public boolean buscarTrabajador(int id);
+public boolean agregarTrabajador(String gremioTrabajador, double sueldoTrabajador, String correoInstitucional, int idTrabajador, String nombreTrabajador, String correoPersonal, String cedulaTrabajador);
+ public Trabajador[] obtenerTrabajador();
+ public int getTotalTrabajador();
+  public void datoanuladoTrabajador();
 }

@@ -10,50 +10,34 @@ public class Trabajadores implements ITrabajadores{
         totalTrabajadores = 0;
     }
     
-    public boolean agregaTrabajador(Trabajador trabajador){
+    public Trabajadores() {
+        trabajadores = new Trabajador[100];
+        totalTrabajadores = 0;
+    }
+    
+    
+    public boolean agregarTrabajador(String gremioTrabajador, double sueldoTrabajador, String correoInstitucional, int idTrabajador, String nombreTrabajador, String correoPersonal, String cedulaTrabajador){
         if (totalTrabajadores == trabajadores.length) {
-            return false;
-        }else{
+            return false;}
+        for (int i = 0; i < totalTrabajadores; i++) {
+        if (trabajadores[i].getId() == idTrabajador) {
+            return false; 
+        } }        
+            Trabajador trabajador = new Trabajador( gremioTrabajador,  sueldoTrabajador,  correoInstitucional,  idTrabajador,  nombreTrabajador,  correoPersonal,  cedulaTrabajador);
             trabajadores[totalTrabajadores] = trabajador;
             totalTrabajadores = totalTrabajadores +1;
                     return true;
         }
+    
+    public Trabajador[] obtenerTrabajador() {
+    return trabajadores;
+    }
+    public int getTotalTrabajador() {
+        return totalTrabajadores;
     }
     
-     public void imprimirTrabajador(){
-     for (int i = 0; i < totalTrabajadores; i++) {
-         System.out.println("");
-         System.out.println("TRABAJADOR");
-         System.out.println("ID: " + trabajadores[i].getId());
-         System.out.println("Nombre: " + trabajadores[i].getNombre());
-         System.out.println("Cedula: " + trabajadores[i].getCedula());
-         System.out.println("Correo personal: " + trabajadores[i].getCorreoPersonal());
-         System.out.println("Correo institucional: " + trabajadores[i].getCorreoInstitucional());
-         System.out.println("Sueldo: " + trabajadores[i].getSueldo());
-         System.out.println("Gremio: " + trabajadores[i].getGremio());
-         System.out.println("");
-     }
-   }
-    
-    public boolean actualizarTrabajador(int i, Trabajador trabajador){
-        trabajadores[i] = trabajador; 
-        return true;
-    }
-    
-    public boolean datoanuladoTrabajador(int i, Trabajador trabajador){
-        trabajadores[i] = trabajador;
-        return true;
-    } 
-        public boolean buscarTrabajador(int id){
-    for (int i = 0; i < totalTrabajadores; i++) {
-        if (trabajadores[i].getId() == id) {
-            System.out.println("Trabajador encontrado:");
-            System.out.println(trabajadores[i]); 
-            return true;
-        }
-    }
-    System.out.println("No se encontró un Trabajador con ID " + id);
-    return false;
+    public void datoanuladoTrabajador(){
+        totalTrabajadores--;
 } 
 }
 
