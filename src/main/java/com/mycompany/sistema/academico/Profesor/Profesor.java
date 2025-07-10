@@ -4,6 +4,7 @@
  */
 package com.mycompany.sistema.academico.Profesor;
 
+
 import com.mycompany.sistema.academico.PersonalAcademico.PersonalAcademico;
 
 
@@ -29,8 +30,14 @@ public class Profesor extends PersonalAcademico{
     public void setEscalafon(EnumeracionEscalafon Escalafon) {
         this.Escalafon = Escalafon;
     }
-     
-    
+
+    @Override
+    public String toString() {
+        return "Profesor{" + super.toString()+"Escalafon=" + Escalafon + '}';
+    }
+
+   
+    }
    
     
-}
+

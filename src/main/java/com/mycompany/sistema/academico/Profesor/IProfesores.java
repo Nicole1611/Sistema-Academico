@@ -9,8 +9,8 @@ package com.mycompany.sistema.academico.Profesor;
  * @author anaaw
  */
 public interface IProfesores {
-    
-public String agregarProfesor();
-public void imprimirProfesor(Profesores[]profesor);
-    
+    public boolean agregaProfesores(EnumeracionEscalafon Escalafon, double sueldo, String correoInstitucional, int idProfesores, String nombreProfesor, String correoPersonal, String cedulaProfesor); 
+    public Profesor[] obtenerProfesor() ;
+    public int getTotalProfesor();
+    public void datoanuladoProfesor();
 }
