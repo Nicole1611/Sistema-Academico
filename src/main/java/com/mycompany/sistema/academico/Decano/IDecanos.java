@@ -9,12 +9,9 @@ package com.mycompany.sistema.academico.Decano;
  * @author anaaw
  */
 public interface IDecanos {
- 
-public boolean agregarDecano (Decano decano);
-public void imprimirDecanos();
-public boolean actualizarDecano(int i,Decano decano);
-public boolean eliminarDecano(int i, Decano decano);
-public boolean buscarDecano(int id);
-
+public boolean agregaDecanos(String nivelJerarquico, double sueldo, String correoInstitucional, int idDecanos, String nombreDecanos, String correoPersonal, String cedulaDecano); 
+public Decano[] obtenerDecanos();
+    public int getTotalDecanos();
+    public void datoanulado();
     
 }

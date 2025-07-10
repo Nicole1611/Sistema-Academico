@@ -9,52 +9,32 @@ public class Decanos implements IDecanos{
     public Decanos(int dimension) {
         decanos= new Decano[dimension];
         totalDecanos=0;
-
+    }
+    public Decanos() {
+       decanos = new Decano[100];
+        totalDecanos = 0;
+    }
+     public boolean agregaDecanos(String nivelJerarquico, double sueldo, String correoInstitucional, int idDecanos, String nombreDecanos, String correoPersonal, String cedulaDecano){
+        if (totalDecanos == decanos.length) {
+            return false;}
+        for (int i = 0; i < totalDecanos; i++) {
+        if (decanos[i].getId() == idDecanos ){
+            return false; 
+        } }        
+            Decano decano = new Decano(nivelJerarquico, sueldo, correoInstitucional, idDecanos, nombreDecanos, correoPersonal, cedulaDecano);
+            decanos[totalDecanos] = decano;
+            totalDecanos = totalDecanos +1;
+                    return true;
+        }
+    public Decano[] obtenerDecanos() {
+    return decanos;
+    }
+    public int getTotalDecanos() {
+        return totalDecanos;
     }
     
-    
-    public boolean agregarDecano(Decano decano){
-        if (totalDecanos==decanos.length){
-            return false;
-        } else {
-             decanos[totalDecanos]= decano;
-             totalDecanos=totalDecanos +1;
-             return true;
-            
-        }
-        
-    }
-public void imprimirDecanos(){
-        for (int i = 0; i <totalDecanos; i++) {
-            System.out.println("nivel jerargico"+decanos[i].getNivelJerarquico());
-            System.out.println("Nombre"+decanos[i].getNombre());
-            System.out.println("sueldo"+decanos[i].getSueldo());
-          
-           
-            
-        }
-        
-    }
-    public boolean actualizarDecano(int i,Decano decano){
-        decanos[i]=decano;
-        return false;
-        
-    }
-    public boolean eliminarDecano(int i,Decano decano){
-        decanos[i]=decano;
-        return false;
-    
-    }
-    public boolean buscarDecano(int id) {
-    for (int i = 0; i < totalDecanos; i++) {
-        if (decanos[i].getId() == id) {
-            System.out.println("Decano encontrado:");
-            System.out.println(decanos[i]); // usa toString()
-            return true;
-        }
-    }
-    System.out.println("No se encontró un decano con ID " + id);
-    return false;
-} 
+    public void datoanulado(){
+        totalDecanos--;
+    } 
     }
 

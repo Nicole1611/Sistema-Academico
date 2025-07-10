@@ -32,6 +32,12 @@ public class Decano extends PersonalAcademico{
         this.nivelJerarquico = nivelJerarquico;
     }
 
+    @Override
+    public String toString() {
+        return "Decano{"+ super.toString()+ "nivelJerarquico=" + nivelJerarquico + '}';
+    }
+
+   
    
    
 }
