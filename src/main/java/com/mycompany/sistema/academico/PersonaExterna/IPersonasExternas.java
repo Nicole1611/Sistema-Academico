@@ -6,6 +6,8 @@ package com.mycompany.sistema.academico.PersonaExterna;
 
 
 public interface IPersonasExternas {
-    public boolean verificarCedula();
-    public String agregarPersonaExterna();
+   public boolean agregaPersonaExterna(String descripcion, int idPersonaExterna, String nombrePersonaExterna, String correoPersonal, String cedulaPersonaExterna);
+ public PersonaExterna[] obtenerPersonaExterna();
+ public int getTotalPersonaExterna();
+  public void datoanuladoPersonaExterna();
 }

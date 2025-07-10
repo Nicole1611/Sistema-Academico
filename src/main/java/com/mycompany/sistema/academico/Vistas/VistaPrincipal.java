@@ -7,6 +7,8 @@ import javax.swing.*;
 import java.awt.event.*;
 import com.mycompany.sistema.academico.Vistas.VEstudiantes;
 import com.mycompany.sistema.academico.Vistas.VTrabajadores;
+import com.mycompany.sistema.academico.Vistas.VProfesor;
+import com.mycompany.sistema.academico.Vistas.VDecano;
 
 /**
  *
@@ -15,7 +17,9 @@ import com.mycompany.sistema.academico.Vistas.VTrabajadores;
 public class VistaPrincipal extends javax.swing.JFrame {
 private VEstudiantes ventanaEstudiantes;
 private VTrabajadores ventanaTrabajadores;
-
+private VPersonaExterna ventanaPersonaExterna;
+private VProfesor ventanaProfesor;
+private VDecano ventanaDecano;
     /**
      * Creates new form VistaPrincipal
      */
@@ -35,22 +39,63 @@ private VTrabajadores ventanaTrabajadores;
         lbDatos = new javax.swing.JLabel();
         btnDatosEstudiantes = new javax.swing.JButton();
         btnTrabajador = new javax.swing.JButton();
+        btnPersonaExterna = new javax.swing.JButton();
+        btnProfesor = new javax.swing.JButton();
+        btnDecano = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        lbDatos.setFont(new java.awt.Font("Serif", 3, 36)); // NOI18N
         lbDatos.setText("INGRESO DE DATOS");
+        lbDatos.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
+        btnDatosEstudiantes.setBackground(new java.awt.Color(204, 255, 204));
+        btnDatosEstudiantes.setFont(new java.awt.Font("Serif", 3, 14)); // NOI18N
         btnDatosEstudiantes.setText("ESTUDIANTES");
+        btnDatosEstudiantes.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnDatosEstudiantes.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnDatosEstudiantesActionPerformed(evt);
             }
         });
 
+        btnTrabajador.setBackground(new java.awt.Color(255, 255, 204));
+        btnTrabajador.setFont(new java.awt.Font("Serif", 3, 14)); // NOI18N
         btnTrabajador.setText("TRABAJADOR");
+        btnTrabajador.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnTrabajador.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnTrabajadorActionPerformed(evt);
+            }
+        });
+
+        btnPersonaExterna.setBackground(new java.awt.Color(255, 204, 204));
+        btnPersonaExterna.setFont(new java.awt.Font("Serif", 3, 14)); // NOI18N
+        btnPersonaExterna.setText("PERSONA EXTERNA");
+        btnPersonaExterna.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btnPersonaExterna.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnPersonaExternaActionPerformed(evt);
+            }
+        });
+
+        btnProfesor.setBackground(new java.awt.Color(255, 153, 255));
+        btnProfesor.setFont(new java.awt.Font("Serif", 3, 14)); // NOI18N
+        btnProfesor.setText("PROFESOR");
+        btnProfesor.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btnProfesor.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnProfesorActionPerformed(evt);
+            }
+        });
+
+        btnDecano.setBackground(new java.awt.Color(102, 255, 255));
+        btnDecano.setFont(new java.awt.Font("Serif", 3, 14)); // NOI18N
+        btnDecano.setText("DECANO");
+        btnDecano.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btnDecano.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDecanoActionPerformed(evt);
             }
         });
 
@@ -59,26 +104,45 @@ private VTrabajadores ventanaTrabajadores;
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(140, 140, 140)
-                .addComponent(lbDatos)
-                .addContainerGap(154, Short.MAX_VALUE))
+                .addGap(39, 39, 39)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(btnPersonaExterna)
+                        .addGap(78, 78, 78)
+                        .addComponent(btnProfesor))
+                    .addComponent(lbDatos))
+                .addGap(0, 61, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
-                .addGap(51, 51, 51)
-                .addComponent(btnDatosEstudiantes)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btnTrabajador)
-                .addGap(83, 83, 83))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(50, 50, 50)
+                        .addComponent(btnDatosEstudiantes)
+                        .addGap(96, 96, 96)
+                        .addComponent(btnTrabajador))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(179, 179, 179)
+                        .addComponent(btnDecano)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(lbDatos)
-                .addGap(51, 51, 51)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(lbDatos))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(94, 94, 94)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(btnTrabajador)
+                            .addComponent(btnDatosEstudiantes))))
+                .addGap(56, 56, 56)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnDatosEstudiantes)
-                    .addComponent(btnTrabajador))
-                .addContainerGap(204, Short.MAX_VALUE))
+                    .addComponent(btnPersonaExterna)
+                    .addComponent(btnProfesor))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 54, Short.MAX_VALUE)
+                .addComponent(btnDecano)
+                .addGap(50, 50, 50))
         );
 
         pack();
@@ -98,6 +162,27 @@ private VTrabajadores ventanaTrabajadores;
     ventanaTrabajadores.setVisible(true);     // TODO add your handling code here:
     }//GEN-LAST:event_btnTrabajadorActionPerformed
 
+    private void btnPersonaExternaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPersonaExternaActionPerformed
+     if (ventanaPersonaExterna == null) {
+        ventanaPersonaExterna = new VPersonaExterna();
+    }
+    ventanaPersonaExterna.setVisible(true);   // TODO add your handling code here:
+    }//GEN-LAST:event_btnPersonaExternaActionPerformed
+
+    private void btnProfesorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProfesorActionPerformed
+     if (ventanaProfesor == null) {
+        ventanaProfesor = new VProfesor();
+    }
+    ventanaProfesor.setVisible(true);  
+    }//GEN-LAST:event_btnProfesorActionPerformed
+
+    private void btnDecanoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDecanoActionPerformed
+    if (ventanaDecano == null) {
+        ventanaDecano = new VDecano();
+    }
+    ventanaDecano.setVisible(true);     // TODO add your handling code here:
+    }//GEN-LAST:event_btnDecanoActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -105,6 +190,9 @@ private VTrabajadores ventanaTrabajadores;
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnDatosEstudiantes;
+    private javax.swing.JButton btnDecano;
+    private javax.swing.JButton btnPersonaExterna;
+    private javax.swing.JButton btnProfesor;
     private javax.swing.JButton btnTrabajador;
     private javax.swing.JLabel lbDatos;
     // End of variables declaration//GEN-END:variables

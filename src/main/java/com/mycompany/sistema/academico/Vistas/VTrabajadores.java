@@ -66,8 +66,8 @@ public class VTrabajadores extends javax.swing.JFrame {
         txtCedula = new javax.swing.JTextField();
         txtGremio = new javax.swing.JTextField();
         txtCorreo = new javax.swing.JTextField();
-        txtCorreoInstitucional = new javax.swing.JTextField();
         txtSueldo = new javax.swing.JTextField();
+        txtCorreoInstitucional = new javax.swing.JTextField();
         jScrollPane2 = new javax.swing.JScrollPane();
         tablaTrabajador = new javax.swing.JTable();
         btnAgregar = new javax.swing.JButton();
@@ -104,28 +104,79 @@ public class VTrabajadores extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setText("TRABAJADOR");
+        jLabel1.setFont(new java.awt.Font("Serif", 3, 36)); // NOI18N
+        jLabel1.setText("            TRABAJADOR");
+        jLabel1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
+        jLabel2.setFont(new java.awt.Font("Serif", 3, 14)); // NOI18N
         jLabel2.setText("ID");
+        jLabel2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
+        lbNombre.setFont(new java.awt.Font("Serif", 3, 14)); // NOI18N
         lbNombre.setText("Nombre");
+        lbNombre.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
+        lblCedula.setFont(new java.awt.Font("Serif", 3, 14)); // NOI18N
         lblCedula.setText("Cedula");
+        lblCedula.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
+        lblGremio.setFont(new java.awt.Font("Serif", 3, 14)); // NOI18N
         lblGremio.setText("Gremio");
+        lblGremio.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
+        lblCorreo.setFont(new java.awt.Font("Serif", 3, 14)); // NOI18N
         lblCorreo.setText("Correo");
+        lblCorreo.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
+        jLabel7.setFont(new java.awt.Font("Serif", 3, 14)); // NOI18N
         jLabel7.setText("Correo Institucional");
+        jLabel7.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
+        lblSueldo.setFont(new java.awt.Font("Serif", 3, 14)); // NOI18N
         lblSueldo.setText("Sueldo");
+        lblSueldo.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
+        txtId.setBackground(new java.awt.Color(255, 204, 255));
+        txtId.setFont(new java.awt.Font("Serif", 3, 14)); // NOI18N
+        txtId.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        txtNombre.setBackground(new java.awt.Color(255, 204, 255));
+        txtNombre.setFont(new java.awt.Font("Serif", 3, 14)); // NOI18N
+        txtNombre.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        txtCedula.setBackground(new java.awt.Color(255, 204, 255));
+        txtCedula.setFont(new java.awt.Font("Serif", 3, 14)); // NOI18N
+        txtCedula.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        txtGremio.setEditable(false);
+        txtGremio.setBackground(new java.awt.Color(255, 204, 255));
+        txtGremio.setFont(new java.awt.Font("Serif", 3, 14)); // NOI18N
+        txtGremio.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        txtCorreo.setBackground(new java.awt.Color(255, 204, 255));
+        txtCorreo.setFont(new java.awt.Font("Serif", 3, 14)); // NOI18N
+        txtCorreo.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        txtSueldo.setBackground(new java.awt.Color(255, 204, 255));
+        txtSueldo.setFont(new java.awt.Font("Serif", 3, 14)); // NOI18N
+        txtSueldo.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         txtSueldo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtSueldoActionPerformed(evt);
             }
         });
 
+        txtCorreoInstitucional.setBackground(new java.awt.Color(255, 204, 255));
+        txtCorreoInstitucional.setFont(new java.awt.Font("Serif", 3, 14)); // NOI18N
+        txtCorreoInstitucional.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        txtCorreoInstitucional.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtCorreoInstitucionalActionPerformed(evt);
+            }
+        });
+
+        tablaTrabajador.setBackground(new java.awt.Color(255, 255, 204));
+        tablaTrabajador.setFont(new java.awt.Font("Serif", 3, 14)); // NOI18N
         tablaTrabajador.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -134,172 +185,179 @@ public class VTrabajadores extends javax.swing.JFrame {
                 {null, null, null, null}
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+                "ID", "Nombre", "Cedula", "Correo"
             }
         ));
         jScrollPane2.setViewportView(tablaTrabajador);
 
+        btnAgregar.setBackground(new java.awt.Color(210, 169, 255));
+        btnAgregar.setFont(new java.awt.Font("Serif", 3, 14)); // NOI18N
         btnAgregar.setText("AGREGAR");
+        btnAgregar.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnAgregar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAgregarActionPerformed(evt);
             }
         });
 
+        btnEliminar.setBackground(new java.awt.Color(186, 236, 218));
+        btnEliminar.setFont(new java.awt.Font("Serif", 3, 14)); // NOI18N
         btnEliminar.setText("ELIMINAR");
+        btnEliminar.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnEliminar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnEliminarActionPerformed(evt);
             }
         });
 
+        btnActualizar.setBackground(new java.awt.Color(223, 247, 147));
+        btnActualizar.setFont(new java.awt.Font("Serif", 3, 14)); // NOI18N
         btnActualizar.setText("ACTUALIZAR");
+        btnActualizar.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnActualizar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnActualizarActionPerformed(evt);
             }
         });
 
+        btnBuscar.setBackground(new java.awt.Color(174, 218, 220));
+        btnBuscar.setFont(new java.awt.Font("Serif", 3, 14)); // NOI18N
         btnBuscar.setText("BUSCAR");
+        btnBuscar.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnBuscar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBuscarActionPerformed(evt);
             }
         });
 
+        btnCerrar.setBackground(new java.awt.Color(248, 231, 112));
         btnCerrar.setText("CERRAR");
+        btnCerrar.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnCerrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCerrarActionPerformed(evt);
             }
         });
 
+        txtIDBotones.setBackground(new java.awt.Color(255, 204, 255));
+        txtIDBotones.setFont(new java.awt.Font("Serif", 3, 14)); // NOI18N
         txtIDBotones.setText(" ");
+        txtIDBotones.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
+        lblIngreseID.setFont(new java.awt.Font("Serif", 3, 14)); // NOI18N
         lblIngreseID.setText("Ingrese id");
+        lblIngreseID.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(layout.createSequentialGroup()
-                                    .addGap(57, 57, 57)
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                        .addGroup(layout.createSequentialGroup()
-                                            .addComponent(lblSueldo)
-                                            .addGap(61, 61, 61)
-                                            .addComponent(txtSueldo))
-                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                                                .addComponent(jLabel2)
-                                                                .addGap(64, 64, 64))
-                                                            .addGroup(layout.createSequentialGroup()
-                                                                .addComponent(lbNombre)
-                                                                .addGap(57, 57, 57)))
-                                                        .addGroup(layout.createSequentialGroup()
-                                                            .addComponent(lblCedula)
-                                                            .addGap(64, 64, 64)))
-                                                    .addGroup(layout.createSequentialGroup()
-                                                        .addComponent(lblGremio)
-                                                        .addGap(62, 62, 62)))
-                                                .addGroup(layout.createSequentialGroup()
-                                                    .addComponent(lblCorreo)
-                                                    .addGap(65, 65, 65)))
-                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                                .addComponent(txtCorreo, javax.swing.GroupLayout.DEFAULT_SIZE, 73, Short.MAX_VALUE)
-                                                .addComponent(txtGremio)
-                                                .addComponent(txtCedula)
-                                                .addComponent(txtNombre)
-                                                .addComponent(txtId)))))
-                                .addGroup(layout.createSequentialGroup()
-                                    .addGap(79, 79, 79)
-                                    .addComponent(jLabel1)))
-                            .addGroup(layout.createSequentialGroup()
-                                .addContainerGap()
-                                .addComponent(jLabel7)
-                                .addGap(18, 18, 18)
-                                .addComponent(txtCorreoInstitucional, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(37, 37, 37)
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
                         .addComponent(btnAgregar)
                         .addGap(18, 18, 18)
                         .addComponent(btnEliminar)
-                        .addGap(26, 26, 26)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(btnActualizar)
-                        .addGap(28, 28, 28)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(txtIDBotones)
-                            .addComponent(btnBuscar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(52, 52, 52)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(32, 32, 32)
-                                .addComponent(btnCerrar))
-                            .addGroup(layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(lblIngreseID)))))
-                .addContainerGap(38, Short.MAX_VALUE))
+                            .addComponent(jLabel7)
+                            .addComponent(lbNombre)
+                            .addComponent(lblCedula)
+                            .addComponent(lblGremio)
+                            .addComponent(lblCorreo)
+                            .addComponent(jLabel2)
+                            .addComponent(lblSueldo))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 101, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtSueldo, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(txtCorreoInstitucional, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(txtCorreo, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(txtGremio, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(txtId, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 97, Short.MAX_VALUE)
+                                .addComponent(txtNombre, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(txtCedula, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 97, Short.MAX_VALUE)))))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(63, 63, 63)
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(29, 29, 29))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(lblIngreseID)
+                        .addGap(53, 53, 53)
+                        .addComponent(txtIDBotones, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(54, 54, 54)
+                        .addComponent(btnBuscar)
+                        .addGap(62, 62, 62))))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnCerrar, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(84, 84, 84))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(189, 189, 189)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 497, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addGap(22, 22, 22)
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 43, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
+                        .addGap(9, 9, 9)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(txtGremio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(26, 26, 26)
+                                .addComponent(txtCorreo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel2)
+                                .addGap(18, 18, 18)
+                                .addComponent(lbNombre)
+                                .addGap(30, 30, 30)
+                                .addComponent(lblCedula)
+                                .addGap(29, 29, 29)
+                                .addComponent(lblGremio)
+                                .addGap(26, 26, 26)
+                                .addComponent(lblCorreo)))
                         .addGap(18, 18, 18)
-                        .addComponent(jLabel1)
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel2)
-                            .addComponent(txtId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(lbNombre)
-                            .addComponent(txtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(lblCedula)
-                            .addComponent(txtCedula, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(lblGremio)
-                            .addComponent(txtGremio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(20, 20, 20)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(lblCorreo)
-                            .addComponent(txtCorreo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(23, 23, 23)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel7)
                             .addComponent(txtCorreoInstitucional, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
+                        .addGap(23, 23, 23)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(lblSueldo)
                             .addComponent(txtSueldo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 328, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(7, 7, 7)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtIDBotones, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblIngreseID))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txtId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(txtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(txtCedula, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnAgregar)
                     .addComponent(btnEliminar)
-                    .addComponent(btnActualizar)
+                    .addComponent(btnActualizar))
+                .addContainerGap(43, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnBuscar)
-                    .addComponent(btnCerrar))
-                .addContainerGap(30, Short.MAX_VALUE))
+                    .addComponent(txtIDBotones, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblIngreseID))
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 316, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(26, 26, 26)
+                .addComponent(btnCerrar)
+                .addGap(26, 26, 26))
         );
 
         pack();
@@ -337,6 +395,10 @@ public class VTrabajadores extends javax.swing.JFrame {
     this.dispose();
       principal.setVisible(true);    // TODO add your handling code here:
     }//GEN-LAST:event_btnCerrarActionPerformed
+
+    private void txtCorreoInstitucionalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCorreoInstitucionalActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtCorreoInstitucionalActionPerformed
 
     /**
      * @param args the command line arguments
