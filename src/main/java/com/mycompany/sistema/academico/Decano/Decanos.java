@@ -5,15 +5,17 @@ public class Decanos implements IDecanos{
     //atributo 
     private Decano [] decanos;
     private int totalDecanos;
-    
+    // constructor//
     public Decanos(int dimension) {
         decanos= new Decano[dimension];
         totalDecanos=0;
     }
+    //arreglo//
     public Decanos() {
        decanos = new Decano[100];
         totalDecanos = 0;
     }
+    //metodos//
      public boolean agregaDecanos(String nivelJerarquico, double sueldo, String correoInstitucional, int idDecanos, String nombreDecanos, String correoPersonal, String cedulaDecano){
         if (totalDecanos == decanos.length) {
             return false;}

@@ -29,7 +29,7 @@ public class VDecano extends javax.swing.JFrame {
       modeloTabla = new DefaultTableModel(new String[]{
         "ID", "Nombre", "Cédula", "Correo Inst.", "Correo Pers.","Nivel Je","Sueldo" 
     }, 0);
-    tableDecanos.setModel(modeloTabla); // usa la tabla del diseñador
+    tableDecanos.setModel(modeloTabla); 
     tableDecanos.getSelectionModel().addListSelectionListener(e -> {
     if (!e.getValueIsAdjusting()) {
         cargarDecanoSeleccionado();

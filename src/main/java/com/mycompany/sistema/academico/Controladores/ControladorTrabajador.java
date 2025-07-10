@@ -37,7 +37,7 @@ private Trabajadores iTrabajadores;
     actualizarTabla();
     vistaTrabajadores.limpiarCampos();
 } else {
-    notificadorMensajes.mostrarMensaje("No se pudo agregar: ID o Código duplicado.");
+    notificadorMensajes.mostrarMensaje("No se pudo agregar: ID duplicado.");
 }
         }catch(Exception e){
             notificadorMensajes.mostrarMensaje("Error");

@@ -27,7 +27,7 @@ public class VPersonaExterna extends javax.swing.JFrame {
         modeloTabla = new DefaultTableModel(new String[]{
             "ID", "Cédula", "Nombre", "Correo", "Descripción"
         },0);
-        tablaPersonaExterna.setModel(modeloTabla); // usa la tabla del diseñador
+        tablaPersonaExterna.setModel(modeloTabla); 
     tablaPersonaExterna.getSelectionModel().addListSelectionListener(e -> {
     if (!e.getValueIsAdjusting()) {
         cargarPersonaExternaSeleccionado();

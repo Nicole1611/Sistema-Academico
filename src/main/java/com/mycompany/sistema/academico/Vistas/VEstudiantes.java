@@ -29,7 +29,7 @@ public class VEstudiantes extends javax.swing.JFrame {
         "ID", "Cédula", "Nombre", "Correo Inst.", "Correo Pers.", "Código"
     }, 0);
 
-    tableEstudiantes.setModel(modeloTabla); // usa la tabla del diseñador
+    tableEstudiantes.setModel(modeloTabla); 
     tableEstudiantes.getSelectionModel().addListSelectionListener(e -> {
     if (!e.getValueIsAdjusting()) {
         cargarEstudianteSeleccionado();

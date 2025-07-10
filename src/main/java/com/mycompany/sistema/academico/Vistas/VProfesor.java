@@ -25,7 +25,6 @@ public class VProfesor extends javax.swing.JFrame {
     private ControladorProfesor controladorProfesor;
     private DefaultTableModel modeloTabla;
     private VistaPrincipal principal;
-//private javax.swing.JComboBox comboEscalafon;
 
     public VProfesor() {
     initComponents();
@@ -37,8 +36,6 @@ public class VProfesor extends javax.swing.JFrame {
     }, 0);
 
     tableProfesores.setModel(modeloTabla);
-
-    //comboEscalafon.setModel(new javax.swing.DefaultComboBoxModel<>(EnumeracionEscalafon.values()));
 
     tableProfesores.getSelectionModel().addListSelectionListener(e -> {
         if (!e.getValueIsAdjusting()) {

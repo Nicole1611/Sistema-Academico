@@ -32,7 +32,7 @@ public class VTrabajadores extends javax.swing.JFrame {
         "ID", "Nombre", "Cédula", "Gremio", "Correo Inst.", "Correo Pers.", "Sueldo"
     }, 0);
 
-    tablaTrabajador.setModel(modeloTabla); // usa la tabla del diseñador
+    tablaTrabajador.setModel(modeloTabla); 
     tablaTrabajador.getSelectionModel().addListSelectionListener(e -> {
     if (!e.getValueIsAdjusting()) {
         cargarTrabajadorSeleccionado();
@@ -64,7 +64,6 @@ public class VTrabajadores extends javax.swing.JFrame {
         txtId = new javax.swing.JTextField();
         txtNombre = new javax.swing.JTextField();
         txtCedula = new javax.swing.JTextField();
-        txtGremio = new javax.swing.JTextField();
         txtCorreo = new javax.swing.JTextField();
         txtSueldo = new javax.swing.JTextField();
         txtCorreoInstitucional = new javax.swing.JTextField();
@@ -77,6 +76,7 @@ public class VTrabajadores extends javax.swing.JFrame {
         btnCerrar = new javax.swing.JButton();
         txtIDBotones = new javax.swing.JTextField();
         lblIngreseID = new javax.swing.JLabel();
+        txtGremio = new javax.swing.JTextField();
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -147,11 +147,6 @@ public class VTrabajadores extends javax.swing.JFrame {
         txtCedula.setBackground(new java.awt.Color(255, 204, 255));
         txtCedula.setFont(new java.awt.Font("Serif", 3, 14)); // NOI18N
         txtCedula.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-
-        txtGremio.setEditable(false);
-        txtGremio.setBackground(new java.awt.Color(255, 204, 255));
-        txtGremio.setFont(new java.awt.Font("Serif", 3, 14)); // NOI18N
-        txtGremio.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         txtCorreo.setBackground(new java.awt.Color(255, 204, 255));
         txtCorreo.setFont(new java.awt.Font("Serif", 3, 14)); // NOI18N
@@ -248,6 +243,10 @@ public class VTrabajadores extends javax.swing.JFrame {
         lblIngreseID.setText("Ingrese id");
         lblIngreseID.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
+        txtGremio.setBackground(new java.awt.Color(255, 204, 204));
+        txtGremio.setFont(new java.awt.Font("Serif", 3, 14)); // NOI18N
+        txtGremio.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -276,9 +275,9 @@ public class VTrabajadores extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(txtSueldo, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(txtGremio, javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(txtCorreoInstitucional, javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(txtCorreo, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(txtGremio, javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(txtId, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 97, Short.MAX_VALUE)
                                 .addComponent(txtNombre, javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(txtCedula, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 97, Short.MAX_VALUE)))))
@@ -315,7 +314,7 @@ public class VTrabajadores extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(txtGremio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(26, 26, 26)
+                                .addGap(38, 38, 38)
                                 .addComponent(txtCorreo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jLabel2)
@@ -441,10 +440,10 @@ public class VTrabajadores extends javax.swing.JFrame {
     public void limpiarCampos() {
         txtId.setText("");
         txtNombre.setText("");
-        txtCedula.setText("");
-        txtGremio.setText("");
+        txtCedula.setText("");      
         txtCorreoInstitucional.setText("");
         txtCorreo.setText("");
+        txtGremio.setText("");
         txtSueldo.setText("");
     }
 private void cargarTrabajadorSeleccionado() {
@@ -466,8 +465,9 @@ public void setCamposTrabajador(Trabajador t) {
     txtCedula.setText(t.getCedula());
     txtCorreoInstitucional.setText(t.getCorreoInstitucional());
     txtCorreo.setText(t.getCorreoPersonal());
-    txtSueldo.setText(String.valueOf(t.getSueldo()));
     txtGremio.setText(t.getGremio());
+    txtSueldo.setText(String.valueOf(t.getSueldo()));
+    
 }
 public JTable getTabla() {
     return tablaTrabajador;
